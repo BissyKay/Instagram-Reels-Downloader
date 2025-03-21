@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InstaReelSaver</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+</head>
+<body>
+    <button class="toggle-dark" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+
+    <div class="container">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" class="logo" alt="Logo">
+        <h1>InstaReelSaver</h1>
+        <p class="description">Download Instagram Reels quickly and easily. Paste the Reels link below to get started.</p>
+
+        <input type="text" id="reelUrl" placeholder="Paste Instagram Reels URL here..." />
+        <br>
+        <button onclick="downloadReel()">Download</button>
+
+        <div class="video-preview" id="preview"></div>
+    </div>
+
+    <footer>
+        &copy; <span id="year"></span> InstaReelSaver. Made with ❤️
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark");
+        }
+    </script>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
