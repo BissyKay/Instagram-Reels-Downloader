@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+    --bg-color: #f9f9f9;
+    --text-color: #111;
+    --card-color: #fff;
+    --input-border: #ddd;
+    --footer-color: #999;
+}
+
+body.dark {
+    --bg-color: #121212;
+    --text-color: #eee;
+    --card-color: #1e1e1e;
+    --input-border: #444;
+    --footer-color: #666;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background 0.3s, color 0.3s;
+}
+
+.container {
+    background-color: var(--card-color);
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 80px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #f02849;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+input[type='text'] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #f02849;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #c91f3c;
+}
+
+.toggle-dark {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: 1px solid var(--input-border);
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: var(--text-color);
+}
+
+.video-preview {
+    margin-top: 20px;
+}
+
+footer {
+    margin-top: 40px;
+    color: var(--footer-color);
+    font-size: 0.85rem;
+    text-align: center;
+}
